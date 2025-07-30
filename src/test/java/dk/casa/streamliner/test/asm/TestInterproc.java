@@ -369,7 +369,7 @@ public class TestInterproc extends TestASM {
 		checkMethod(owner, mn);
 		Utils.printMethod(mn);
 	}
-	
+
 	@Test
 	public void testTransformSubField() throws AnalyzerException {
 		String owner = "dk/casa/streamliner/other/testtransform/SubField";

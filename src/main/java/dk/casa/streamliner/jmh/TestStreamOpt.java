@@ -14,7 +14,7 @@ public class TestStreamOpt extends TestBase {
 	public void setUp() {
 		super.setUp();
 	}
-	
+
 	@Benchmark
 	public int sum() {
 		return IntStream.of(v).sum();

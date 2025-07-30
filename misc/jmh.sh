@@ -29,4 +29,3 @@ fi
 CP=$(mvn -q exec:exec -Dexec.executable=echo -Dexec.args="%classpath" 2> /dev/null)
 
 exec $JAVA -Dfile.encoding=UTF-8 -classpath out/asm/:$CP org.openjdk.jmh.Main -rf JSON -rff misc/out.json $ARGS
-

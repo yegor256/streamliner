@@ -143,5 +143,3 @@ if args.pdf:
 	print(f'Saved pdf to {pdf_path}')
 else:
 	plt.show()
-
-

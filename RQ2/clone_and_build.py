@@ -94,4 +94,3 @@ for repourl, revision in urls:
 			assert False, 'Rebuild gradle instead'
 		else:
 			assert False
-
