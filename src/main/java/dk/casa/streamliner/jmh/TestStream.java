@@ -6,6 +6,8 @@ import java.util.concurrent.TimeUnit;
 import java.util.stream.IntStream;
 
 @OutputTimeUnit(TimeUnit.MILLISECONDS)
+@Warmup(iterations = 10, time = 100, timeUnit = TimeUnit.MILLISECONDS)
+@Measurement(iterations = 10, time = 100, timeUnit = TimeUnit.MILLISECONDS)
 @BenchmarkMode(Mode.AverageTime)
 @State(Scope.Thread)
 @Fork(1)
