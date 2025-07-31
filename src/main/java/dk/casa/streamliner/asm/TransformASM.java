@@ -79,18 +79,12 @@ public class TransformASM {
 
     public static void main(String[] args) throws IOException {
         FileUtils.copyDirectory(new File("out/classes"), new File("out/asm"));
-
         Set<String> jmhOptimise = new HashSet<>(Arrays.asList(
                 "sum", "sumOfSquares", "sumOfSquaresEven",
                 "count", "filterCount", "filterMapCount",
                 "megamorphicMaps", "megamorphicFilters",
 		        "allMatch"));
-
         Set<String> jmhOptimiseWCart = new HashSet<>(jmhOptimise);
-        // jmhOptimiseWCart.add("cart");
-
-        // transform("dk.casa.streamliner.jmh.TestPushOpt", jmhOptimiseWCart);
-        // transform("dk.casa.streamliner.jmh.TestPullOpt", jmhOptimise);
         transform("dk.casa.streamliner.jmh.TestStreamOpt", jmhOptimiseWCart);
     }
 
