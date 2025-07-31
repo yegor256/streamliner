@@ -26,4 +26,4 @@ out.csv: out/classes
 
 clean:
 	mvn clean
-	rm out.csv
+	rm -f out.csv
