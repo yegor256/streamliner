@@ -17,7 +17,7 @@ out.csv: out/classes
 	for p in $(PACKAGES); do
 		opts+=("--add-opens java.base/$${p}=ALL-UNNAMED")
 	done
-	if java -version 2>&1 | grep -qv \"1.8; then
+	if java -version 2>&1 | head -1 | grep -qv \"1\.8; then
 		export MAVEN_OPTS="$${opts[*]}"
 	fi
 	mvn exec:java -Dexec.mainClass=dk.casa.streamliner.asm.TransformASM
