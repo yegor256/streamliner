@@ -5,7 +5,7 @@ set -euo pipefail
 self=$(dirname "$0")
 
 if [ "$#" -eq 0 ]; then
-  ARGS="dk.casa.streamliner.jmh.TestStream"
+  ARGS="dk.casa.streamliner.jmh.Test.*"
 else
   ARGS="$@"
 fi
