@@ -1,6 +1,6 @@
 # Reduced Version of Streamliner
 
-This is a reduced version of Streamliner, stream fusion/unrolling software that optimizes Java Stream pipelines into procedural loops.
+This is a reduced version of [Streamliner], stream fusion/unrolling software that optimizes Java Stream pipelines into procedural loops.
 
 To run it, simply do:
 
@@ -18,3 +18,5 @@ Changes in this fork:
 * All benchmarks except one (`TestStream`) were removed
 * JMH and ASM versions were upgraded in `pom.xml`
 * The build was fixed for JDK 9+ (it didn't work)
+
+[Streamliner]: https://github.com/cs-au-dk/streamliner
