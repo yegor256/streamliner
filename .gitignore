@@ -1,11 +1,10 @@
-/out
-/lib
-/transformed
 *.class
+.claude/
+/*.iml
+/.idea
+/lib
 /misc/out.json
 /misc/pdfs
-
-/.idea
-/*.iml
-
+/out
 /RQ2/repos
+/transformed
