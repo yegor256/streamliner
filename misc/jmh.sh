@@ -27,6 +27,6 @@ export "MAVEN_OPTS=${opts[*]}"
 
 mvn --file "${self}/../pom.xml" exec:java -Dexec.mainClass=dk.casa.streamliner.asm.TransformASM
 
-CP=$(mvn -q --file "${self}/../pom.xml" exec:exec -Dexec.executable=echo -Dexec.args="%classpath" 2> /dev/null)
+CP=$(mvn -q --file "${self}/../pom.xml" exec:exec -Dexec.executable=echo -Dexec.args="%classpath" 2>/dev/null)
 
-java -Dfile.encoding=UTF-8 -classpath "${self}/out/asm/:${CP}" org.openjdk.jmh.Main -rf JSON -rff --file "${self}/out.json" $ARGS
+java -Dfile.encoding=UTF-8 -classpath "${self}/../out/asm/:${CP}" org.openjdk.jmh.Main -rf JSON -rff --file "${self}/out.json" $ARGS
