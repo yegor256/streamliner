@@ -87,7 +87,7 @@ public class TransformASM {
 		        "allMatch"));
 
         Set<String> jmhOptimiseWCart = new HashSet<>(jmhOptimise);
-        jmhOptimiseWCart.add("cart");
+        // jmhOptimiseWCart.add("cart");
 
         transform("dk.casa.streamliner.jmh.TestPushOpt", jmhOptimiseWCart);
         transform("dk.casa.streamliner.jmh.TestPullOpt", jmhOptimise);

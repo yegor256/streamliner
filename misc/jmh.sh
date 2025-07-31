@@ -18,6 +18,19 @@ fi
 
 mvn compile
 
+packages=(
+  java.util
+  java.lang.reflect
+  java.lang.ref
+  java.lang
+  java.util.stream
+)
+opts=()
+for p in "${packages[@]}"; do
+  opts+=("--add-opens java.base/${p}=ALL-UNNAMED")
+done
+export "MAVEN_OPTS=${opts[*]}"
+
 mvn exec:java -Dexec.mainClass=dk.casa.streamliner.asm.TransformASM
 
 CP=$(mvn -q exec:exec -Dexec.executable=echo -Dexec.args="%classpath" 2> /dev/null)

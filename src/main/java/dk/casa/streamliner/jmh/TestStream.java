@@ -38,15 +38,6 @@ public class TestStream extends TestBase {
 	}
 
 	@Benchmark
-	public int cart() {
-		return IntStream.of(v_outer)
-				.flatMap(d ->
-						IntStream.of(v_inner)
-								.map(dP -> dP * d))
-				.sum();
-	}
-
-	@Benchmark
 	public int megamorphicMaps() {
 		return IntStream.of(v)
 				.map(d -> d * 1)
@@ -69,26 +60,6 @@ public class TestStream extends TestBase {
 				.filter(d -> d > 5)
 				.filter(d -> d > 6)
 				.filter(d -> d > 7)
-				.sum();
-	}
-
-	@Benchmark
-	public int flatMapTake() {
-		return IntStream.of(v_outer)
-				.flatMap(x ->
-						IntStream.of(v_inner)
-								.map(dP -> dP * x))
-				.limit(20000000)
-				.sum();
-	}
-
-	@Benchmark
-	public int flatMapTakeRev() {
-		return IntStream.of(v_inner)
-				.flatMap(x ->
-						IntStream.of(v_outer)
-								.map(dP -> dP * x))
-				.limit(20000000)
 				.sum();
 	}
 

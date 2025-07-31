@@ -30,13 +30,13 @@ public abstract class TestBase {
 	abstract public int sum();
 	abstract public int sumOfSquares();
 	abstract public int sumOfSquaresEven();
-	abstract public int cart();
+	// abstract public int cart();
 	/** From StreamAlg */
 	abstract public int megamorphicMaps();
 	abstract public int megamorphicFilters();
-	abstract public int flatMapTake();
+	// abstract public int flatMapTake();
 	/** Experiment */
-	abstract public int flatMapTakeRev();
+	// abstract public int flatMapTakeRev();
 	abstract public boolean allMatch();
 	/** From StreamAlg (pull-style / adapted) */
 	abstract public long count();

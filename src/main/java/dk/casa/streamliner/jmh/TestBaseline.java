@@ -45,16 +45,6 @@ public class TestBaseline extends TestBase {
 	}
 
 	@Benchmark
-	public int cart() {
-		int cart = 0;
-		for(int d = 0 ; d < v_outer.length ; d++)
-			for(int dp = 0 ; dp < v_inner.length ; dp++)
-				cart += v_outer[d] * v_inner[dp];
-
-		return cart;
-	}
-
-	@Benchmark
 	public int megamorphicMaps() {
 		int acc = 0;
 		for(int i = 0 ; i < v.length ; i++)
@@ -74,22 +64,6 @@ public class TestBaseline extends TestBase {
 	}
 
 	@Benchmark
-	public int flatMapTake() {
-		int sum = 0;
-		int n = 0;
-		boolean flag = true;
-		for(int d = 0 ; d < v_outer.length && flag ; d++) {
-			for(int dp = 0 ; dp < v_inner.length && flag ; ){
-				sum += v_outer[d] * v_inner[dp++];
-				if (++n == 20000000)
-					flag = false;
-			}
-		}
-
-		return sum;
-	}
-
-	@Benchmark
 	public boolean allMatch() {
 		boolean flag = true;
 		for(int i = 0; i < v.length; i++)
@@ -98,22 +72,6 @@ public class TestBaseline extends TestBase {
 				break;
 			}
 		return flag;
-	}
-
-	@Benchmark
-	public int flatMapTakeRev() {
-		int sum = 0;
-		int n = 0;
-		boolean flag = true;
-		for(int d = 0 ; d < v_inner.length && flag ; d++) {
-			for(int dp = 0 ; dp < v_outer.length && flag ; ){
-				sum += v_inner[d] * v_outer[dp++];
-				if (++n == 20000000)
-					flag = false;
-			}
-		}
-
-		return sum;
 	}
 
 	@Benchmark

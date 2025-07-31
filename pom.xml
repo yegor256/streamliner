@@ -20,12 +20,12 @@
         <dependency>
             <groupId>org.openjdk.jmh</groupId>
             <artifactId>jmh-core</artifactId>
-            <version>1.23</version>
+            <version>1.36</version>
         </dependency>
         <dependency>
             <groupId>org.openjdk.jmh</groupId>
             <artifactId>jmh-generator-annprocess</artifactId>
-            <version>1.23</version>
+            <version>1.36</version>
         </dependency>
 
         <!-- JUnit https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter -->
@@ -46,12 +46,12 @@
         <dependency>
             <groupId>org.ow2.asm</groupId>
             <artifactId>asm-commons</artifactId>
-            <version>9.0-beta</version>
+            <version>9.8</version>
         </dependency>
         <dependency>
             <groupId>org.ow2.asm</groupId>
             <artifactId>asm-util</artifactId>
-            <version>9.0-beta</version>
+            <version>9.8</version>
         </dependency>
 
         <!-- Java Decompiler https://mvnrepository.com/artifact/org.benf/cfr -->

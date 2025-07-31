@@ -38,15 +38,6 @@ public class TestPull extends TestBase {
 	}
 
 	@Benchmark
-	public int cart() {
-		return IntPullStream.of(v_outer)
-				.flatMap(d ->
-						IntPullStream.of(v_inner)
-								.map(dP -> dP * d))
-				.sum();
-	}
-
-	@Benchmark
 	public int megamorphicMaps() {
 		return IntPullStream.of(v)
 				.map(d -> d * 1)
@@ -69,26 +60,6 @@ public class TestPull extends TestBase {
 				.filter(d -> d > 5)
 				.filter(d -> d > 6)
 				.filter(d -> d > 7)
-				.sum();
-	}
-
-	@Benchmark
-	public int flatMapTake() {
-		return IntPullStream.of(v_outer)
-				.flatMap(x ->
-						IntPullStream.of(v_inner)
-								.map(dP -> dP * x))
-				.limit(20000000)
-				.sum();
-	}
-
-	@Benchmark
-	public int flatMapTakeRev() {
-		return IntPullStream.of(v_inner)
-				.flatMap(x ->
-						IntPullStream.of(v_outer)
-								.map(dP -> dP * x))
-				.limit(20000000)
 				.sum();
 	}
 
