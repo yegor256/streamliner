@@ -89,8 +89,8 @@ public class TransformASM {
         Set<String> jmhOptimiseWCart = new HashSet<>(jmhOptimise);
         // jmhOptimiseWCart.add("cart");
 
-        transform("dk.casa.streamliner.jmh.TestPushOpt", jmhOptimiseWCart);
-        transform("dk.casa.streamliner.jmh.TestPullOpt", jmhOptimise);
+        // transform("dk.casa.streamliner.jmh.TestPushOpt", jmhOptimiseWCart);
+        // transform("dk.casa.streamliner.jmh.TestPullOpt", jmhOptimise);
         transform("dk.casa.streamliner.jmh.TestStreamOpt", jmhOptimiseWCart);
     }
 

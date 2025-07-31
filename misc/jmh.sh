@@ -10,7 +10,7 @@ else
   ARGS="$@"
 fi
 
-mvn --file "${self}/../pom.xml" compile
+mvn --file "${self}/../pom.xml" clean compile
 
 packages=(
   java.util
